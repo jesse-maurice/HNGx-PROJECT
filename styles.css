@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  --dot-bg: #eeeeee;
+  --dot-color: black;
+  --dot-size: 1px;
+  --dot-space: 60px;
+	background:
+		linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+		linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+		var(--dot-color);
+  /* background-color: #eeeeee; */
+  font-family: "DM Serif Display", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+  
+}
+
+.container{
+  max-width: 1320px;
+  margin: 0 auto;
+  height: 100vh;
+  
+  
+}
+
+.wrapper{
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.data{
+  width: 100%;
+}
+
+.hero-img{
+  width: 100%;
+  height: 100%;
+}
+
+.slackImg{
+  border-radius: 50px;
+  width: 100%;
+  height: 100vh;
+  object-fit: contain;
+}
+
+h1{
+  font-size: 60px;
+  font-style: normal;
+  font-weight: bolder;
+  color: #262a2b;
+  text-decoration: solid;
+  line-height: 60px;
+}
+
+p{
+  font-family: "Noto Sans KR", sans-serif;
+  font-style: normal;
+  font-weight: 200;
+  color: #262a2b;
+  opacity: 0.6;
+  
+}
+
+.track{
+  margin-top: 0.3rem;
+  font-size: 45px;
+  letter-spacing: 3px;
+}
+
+.weekday, .UTC{
+  font-size: 20px;
+}
+
+button{
+  margin-top: 1.5rem;
+  background-color: #fe1966;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  padding: 11px 50px;
+  border-radius: 2rem;
+}
+
+a{
+  text-decoration: none;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 13px;
+}
+
+
+/* MOBILE */
+@media (max-width: 480px){
+  .container{
+    height: 100%;
+  }
+
+
+ .wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+ }
+
+  .data{
+    width: 100%;
+    /* padding: 1rem 1rem; */
+    /* margin: 0.625rem 0; */
+  }
+
+  .hero-img{
+    /* border: red solid 2px; */
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+  }
+
+  .slackImg{
+    border-radius: 10px;
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+
+  }
+
+  h1{
+    margin-top: 5px;
+    font-size: 25px;
+    line-height: 30px;
+    margin-bottom: 10px;
+  }
+
+  .track{
+    font-size: 16px;
+    font-weight: 300;
+  }
+
+  .weekday, .UTC{
+    font-size: 14px;
+    font-weight: 300;
+  }
+
+  button{
+    padding: 11px 50px;
+  }
+
+};
+
+
