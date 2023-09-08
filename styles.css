@@ -48,7 +48,7 @@ body{
   width: 100%;
 }
 
-.hero-img{
+div[data-testid="slackDisplayImage"]{
   width: 100%;
   height: 100%;
 }
@@ -60,13 +60,14 @@ body{
   object-fit: contain;
 }
 
-h1{
+h1[data-testid="slackUserName"]{
   font-size: 60px;
   font-style: normal;
   font-weight: bolder;
   color: #262a2b;
   text-decoration: solid;
   line-height: 60px;
+
 }
 
 p{
@@ -77,17 +78,21 @@ p{
   
 }
 
-.track{
+p[data-testid="myTrack"]{
   margin-top: 0.3rem;
   font-size: 40px;
   letter-spacing: 3px;
 }
 
-.weekday, .UTC{
+p[data-testid="currentDayOfTheWeek"] {
   font-size: 40px;
 }
 
-button{
+p[data-testid="currentUTCTime"]{
+  font-size: 40px;
+}
+
+button[data-testid="githubURL"]{
   margin-top: 1rem;
   background-color: #262a2b;
   color: #ffffff;
@@ -134,7 +139,7 @@ a:hover{
     /* margin: 0.625rem 0; */
   }
 
-  .hero-img{
+  .slackDisplayImage{
     /* border: red solid 2px; */
     width: 100%;
     height: 400px;
@@ -149,22 +154,28 @@ a:hover{
 
   }
 
-  h1{
+  #slackUserName{
     margin-top: 5px;
     font-size: 25px;
     line-height: 30px;
     margin-bottom: 10px;
   }
 
-  .track{
+  p[data-testid="currentDayOfTheWeek"] {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+p[data-testid="currentUTCTime"]{
+  font-size: 14px;
+  font-weight: 300;
+}
+
+  p[data-testid="myTrack"]{
     font-size: 16px;
     font-weight: 300;
   }
 
-  .weekday, .UTC{
-    font-size: 14px;
-    font-weight: 300;
-  }
 
   button{
     padding: 11px 50px;
